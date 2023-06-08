@@ -357,7 +357,7 @@ class StickyGroupedListViewState<T, E>
   }
 
   Widget _showFixedGroupHeader(int index) {
-    if (widget.elements.isNotEmpty) {
+    if (widget.elements.isNotEmpty && index < sortedElements.length) {
       _groupHeaderKey = GlobalKey();
       return Container(
         key: _groupHeaderKey,
